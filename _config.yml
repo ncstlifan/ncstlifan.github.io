@@ -1,7 +1,0 @@
-theme: The Cayman theme
-
-remote_theme: pages-themes/cayman@v0.2.0
-plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
-title: [李凡の主页]
-description: [李凡的个人引导页]
