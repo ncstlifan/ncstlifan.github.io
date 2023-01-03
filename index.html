@@ -26,6 +26,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fontawesome-pro@master/css/all.min.css"
         media="all">
 
+     <!--强制使用Https-->
+     <!--判断非本机且未使用 https 时，强制重定向到 https。-->
+    <script>
+    if ((!window.location.host.startsWith("localhost")) && (window.location.protocol != "https:"))
+        window.location = window.location.toString().replace(/^http:/, "https:");
+    </script>
+    
     <!--IE淘汰计划-->
     <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href = "https://ncstlifan.github.io" + encodeURIComponent(window.location.href);</script>
 </head>
