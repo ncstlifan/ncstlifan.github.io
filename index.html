@@ -1,209 +1,133 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
+	<head>
 
-<head>
-    <!-- 基础信息 -->
-    <meta charset="utf-8">
-    <meta name="renderer" content="webkit" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="force-rendering" content="webkit" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="李凡">
-    <meta name="keywords" content="李凡,个人主页">
-    <meta name="author" content="李凡">
-    <title>李凡</title>
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <link rel="stylesheet" type="text/css" href="./css/iconfont.css">
-    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
-    <link rel="icon" href="./favicon.ico">
-    <!--引入SweetAlert
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert@2.1.2/dist/sweetalert.min.js"></script>-->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.all.min.js"></script>
-    <!--引入izitoast-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast@1.4.0/dist/css/iziToast.min.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/izitoast@1.4.0/dist/js/iziToast.min.js"></script>
-    <!--引入fontawesome-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fontawesome-pro@master/css/all.min.css"
-        media="all">
+		<title>李凡</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="keywords" content="李凡">
+		<meta name="description" content="个人引导页面">
+		<link rel="shortcut icon" href="https://s1.imagehub.cc/images/2023/01/04/1ac4cda88ac66212a7884ac234f5237f.png">
+		<script src="js/jquery.min_1.js"></script>
+		<link rel="stylesheet" href="css/main.css">
+		<noscript><link rel="stylesheet" href="css/noscript.css"></noscript>
 
-     <!--强制使用Https-->
-     <!--判断非本机且未使用 https 时，强制重定向到 https。-->
-    <script>
-    if ((!window.location.host.startsWith("localhost")) && (window.location.protocol != "https:"))
-        window.location = window.location.toString().replace(/^http:/, "https:");
-    </script>
-    
-    <!--IE淘汰计划-->
-    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href = "https://ncstlifan.github.io" + encodeURIComponent(window.location.href);</script>
-</head>
 
-<body oncontextmenu=self.event.returnValue=false onselectstart="return false">
-    <!--<span class="mobile btn-mobile-menu">
-        <i class="social iconfont icon-list btn-mobile-menu__icon"></i>
-        <i class="social iconfont icon-ngleup btn-mobile-close__icon hidden"></i>
-    </span>-->
-    <header id="panel" class="panel-cover">
-        <div class="panel-main">
-            <div class="panel-main__inner panel-inverted">
-                <div class="panel-main__content">
-                    <div class="ih-item circle effect right_to_left">
-                        <a class="blog-button">
-                            <div class="img"><img src="./images/logo.png" alt="img" class="js-avatar iUp profilepic">
-                            </div>
-                            <div class="info iUp">
-                                <div class="info-back">
-                                    <h2>李凡</h2>
-                                    <p> 2023 · upping</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <h1 class="panel-cover__title panel-title iUp">
-                        <br /> 李凡 
-                    </h1>
-                    <p class="panel-cover__subtitle panel-subtitle iUp"> 悟已往之不谏 知来者之可追 </p>
-                    <hr class="panel-cover__divider iUp" />
-                    <!--一言无法显示时的文字-->
-                    <p id="description" class="panel-cover__description iUp">每一个人都应该明确自己的方向和位置
-                        <br />
-                        <strong>-「李凡」</strong>
-                    </p>
-                    <div class="navigation-wrapper iUp">
-                        <div>
-                            <nav class="cover-navigation cover-navigation--primary">
-                                <ul class="navigation">
-                                  
-                                     <!--从这里开始
-                                    <li class="navigation__item">
-                                        <a href="https://github.com/ncstlifan" target="_self" class="blog-button">
-                                            <div>目录</div>
-                                        </a>
-                                    </li>
-                                     在这里结束-->
-                                    <li class="navigation__item">
-                                        <a href="https://ncstlifan.gitee.io/ncstlifan.gitee.io/" target="_self" class="blog-button">
-                                            <div>博客</div>
-                                        </a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a href="https://lifan02.notion.site/lifan02/28c40373019a4bc186df33e0ca0d6f99/" target="_self" class="blog-button">
-                                            <div>笔记</div>
-                                        </a>
-                                    </li>
-                                   
-                                    <li class="navigation__item">
-                                        <a href="https://weibo.com/6623435006" target="_self" class="blog-button">
-                                            <div>微博</div>
-                                        </a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <!--<a onclick="update()" class="blog-button">-->
-                                        <a href="http://fansir.ysepan.com/" target="_self" class="blog-button">
-                                            <div>网盘</div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="iUp">
-                            <nav class="cover-navigation navigation--social">
-                                <ul class="navigation">
 
-                                    <li class="navigation__item">
-                                        <a href="https://github.com/ncstlifan" title="Github" target="_self">
-                                            <i class="fas fa-code-branch"></i>
-                                            <span class="label">Github</span>
-                                        </a>
-                                    </li>
-                                    <li class="navigation__item">
-                                        <a href="https://t.me/ncstlifan" title="Telegram" target="_self">
-                                            <i class="fab fa-telegram-plane"></i>
-                                            <span class="label">Telegram</span>
-                                        </a>
-                                    </li>
-                                       <!--从这里开始
-                                    <li class="navigation__item">
-                                        <a href="/" title="Twitter" target="_blank">
-                                            <i class="fab fa-twitter"></i>
-                                            <span class="label">Twitter</span>
-                                        </a>
-                                    </li>
-                                      在这里结束-->
-                                     <!--从这里开始
-                                    <li class="navigation__item">
-                                        <a href="/" title="QQ"
-                                            target="_blank">
-                                            <i class="fab fa-qq"></i>
-                                            <span class="label">QQ</span>
-                                        </a>
-                                    </li>
-                                     在这里结束-->
-                                    <li class="navigation__item">
-                                        <a onclick="weixin()" title="微信" target="self">
-                                            <i class="fab fa-weixin"></i>
-                                            <script>
-                                                function weixin() {
-                                                    Swal.fire({
-                                                        title: "请扫码",
-                                                        text: "请使用微信扫一扫",
-                                                        confirmButtonText: "好的",
-                                                        imageUrl: "./images/weixin.png",
-                                                        imageWidth: 150,
-                                                        imageHeight: 150
-                                                    })
-                                                }
-                                            </script>
-                                        </a>
-                                    </li>
-                                     <!--从这里开始
-                                    <li class="navigation__item">
-                                        <a href="/" title="Email">
-                                            <i class="fas fa-envelope"></i>
-                                            <span class="label">Email</span>
-                                        </a>
-                                    </li>
-                                    在这里结束-->
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel-cover--overlay cover-slate"></div>
-        </div>
-        <div class="remark iUp">
-            <p class="power">Copyright © 李凡 2019
-                <script>document.write(' - ' + (new Date()).getFullYear())</script> 
-            </p>
-        </div>
-    </header>
-    <!--izitoast弹窗设置-->
-    <script>
-        iziToast.settings({
-            timeout: 4000,//调试
-            icon: 'Fontawesome',
-            closeOnEscape: 'true',
-            position: 'topRight',
-            transitionOut: 'fadeOutRight',
-            displayMode: '2',
-            layout: '2',
-            transitionIn: 'bounceInLeft',
-        });
-    </script>
-    <!--izitoast内容-->
-    <script>
-        function update() {
-            iziToast.info({
-                icon: 'fad fa-times-octagon',
-                backgroundColor: '#efefef',
-                title: '站点暂时关闭',
-                message: '只是出现了一点小问题 ~'
-            });
-        }
-    </script>
-    <script type="text/javascript" src="./js/jquery.min.js"></script>
-    <script type="text/javascript" src="./js/fetch.min.js"></script>
-    <script type="text/javascript" src="./js/main.js"></script>
-</body>
 
+	</head>
+	<body class="is-preload">
+	<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<img src="https://s1.imagehub.cc/images/2023/01/04/1ac4cda88ac66212a7884ac234f5237f.png" class="logo" alt="李凡" title="李凡">
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1> 李 凡 </h1>
+								<p>悟已往之不谏 知来者之可追</p><br/>
+								<p>欢迎来访我的小站喔~</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+
+								<li>
+									<a href="https://ncstlifan.gitee.io/ncstlifan.gitee.io/" target="_blank">博客</a>
+								</li>
+
+								<li>
+									<a href="#contact">通讯录</a>
+								</li>
+								
+								<li>
+									<a href="./oldversion/index.html" target="_blank">旧版页</a>
+								</li>
+
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+						<!-- english -->
+							<article id="contact">
+								<ul>
+									<li>
+										<h1>通讯录</h1><br/>
+										<p><a href="#">上一页</a></p>
+									</li><br/><br/>
+
+									<li>
+										<h3>
+											<li>
+									<a href="https://weibo.com/6623435006" target="_blank">李凡の微博</a>
+											</li>
+										</h3>
+									</li>
+
+									<li>
+										<h3>
+											<li>
+									<a href="http://fansir.ysepan.com/" target="_blank">李凡の网盘</a>
+											</li>
+										</h3>
+
+									</li>
+
+									<li>
+										<h3>
+											<li>
+									<a href="https://github.com/ncstlifan" target="_blank">李凡のGithub</a>
+											</li>
+										</h3>
+										<p>
+											<!--2个p标签里面可以写内容-->
+										</p>
+									</li>
+
+									<li>
+										<h3>
+											<li>
+									<a href="https://t.me/ncstlifan" target="_blank">李凡のTelegram</a>
+											</li>
+										</h3>
+									</li>									
+									<li>
+										<h3>
+											实迷途其未远 觉今是而昨非
+										</h3>
+									</li>
+									<li>
+										<h3>
+											未来可期
+										</h3><br/>
+										
+									</li>
+								</ul>
+							</article>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+	                  <p class="copyright">© 2018-2023 <a href="https://ncst.eu.org/" target="_blank"> 李凡 </a></p>
+					</footer>
+
+			</div>
+
+		<!-- BJ -->
+			<div id="bg">
+			</div>
+
+		<!-- Scripts -->
+			<script src="js/jquery.min.js"></script>
+			<script src="js/browser.min.js"></script>
+			<script src="js/breakpoints.min.js"></script>
+			<script src="js/util.js"></script>
+			<script src="js/main.js"></script>
+			<script type="text/javascript">document.oncontextmenu=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}},document.onpaste=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}},document.oncopy=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}},document.oncut=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}},document.onselectstart=function(t){window.event&&(t=window.event);try{var e=t.srcElement;return"INPUT"==e.tagName&&"text"==e.type.toLowerCase()||"TEXTAREA"==e.tagName?!0:!1}catch(n){return!1}};
+			</script>
+	</body>
 </html>
