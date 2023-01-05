@@ -12,6 +12,17 @@
 		<link rel="stylesheet" href="css/main.css">
 		<noscript><link rel="stylesheet" href="css/noscript.css"></noscript>
 
+		<!--强制使用Https
+			判断非本机且未使用 https 时，强制重定向到 https  
+			修改时请删除，否则会无限重定向。
+			by 李凡 2023-01-05 
+		-->
+
+		<script>
+    		if ((!window.location.host.startsWith("localhost")) && (window.location.protocol != "https:"))
+        		window.location = window.location.toString().replace(/^http:/, "https:");
+		</script>   
+
 
 
 
@@ -59,6 +70,14 @@
 										<h1>通讯录</h1><br/>
 										<p><a href="#">上一页</a></p>
 									</li><br/><br/>
+
+									<li>
+										<h3>
+											<li>
+									<a href="mailto:lifan@ncst.eu.org" target="_blank">致信 邮箱</a>
+											</li>
+										</h3>
+									</li
 
 									<li>
 										<h3>
